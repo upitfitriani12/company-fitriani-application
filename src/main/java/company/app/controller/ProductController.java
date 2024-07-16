@@ -29,7 +29,7 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<WebResponse<List<Product>>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
-        PagingInfo pagingInfo = new PagingInfo(products.size(), 1, 1, products.size()); // Example paging info
+        PagingInfo pagingInfo = new PagingInfo(products.size(), 1, 1, products.size());
         WebResponse<List<Product>> response = WebResponse.<List<Product>>builder()
                 .message("All Product Successfully Displayed")
                 .data(products)
@@ -72,6 +72,17 @@ public class ProductController {
         return ResponseEntity.ok(response);
     }
 
+    @GetMapping("/priceRange")
+    public ResponseEntity<WebResponse<List<Product>>> getProductsByPriceRange(
+            @RequestParam("minPrice") Integer minPrice,
+            @RequestParam("maxPrice") Integer maxPrice) {
+        List<Product> products = productService.getProductsByPriceRange(minPrice, maxPrice);
+        WebResponse<List<Product>> response = WebResponse.<List<Product>>builder()
+                .message("Products in price range retrieved successfully")
+                .data(products)
+                .build();
+        return ResponseEntity.ok(response);
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<WebResponse<Product>> updateProduct(@PathVariable Integer id, @RequestBody Product product) {

@@ -220,6 +220,52 @@ Response :
 }
 ```
 
+### Get Products by Price Range
+Request :
+- Method : GET
+- Endpoint `/products/priceRange`
+- Query Param : 
+  - minPrice : integer `5000`,
+  - maxPrice : integer `25000`
+
+Response :
+```json
+{
+  "message": "Products in price range retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "name": "Seblak Rasa Original",
+      "price": 25000,
+      "expiryDate": "2023-12-01",
+      "expired": true
+    },
+    {
+      "id": 4,
+      "name": "Baso Aci Original",
+      "price": 15000,
+      "expiryDate": "2025-10-10",
+      "expired": false
+    },
+    {
+      "id": 5,
+      "name": "Bakso Tulang Rangu",
+      "price": 15000,
+      "expiryDate": "2025-10-08",
+      "expired": false
+    },
+    {
+      "id": 8,
+      "name": "Seblak Komplit",
+      "price": 25000,
+      "expiryDate": "2025-10-01",
+      "expired": false
+    }
+  ],
+  "paging": null
+}
+```
+
 #### Update Product
 
 Request :

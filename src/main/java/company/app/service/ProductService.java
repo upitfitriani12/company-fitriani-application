@@ -11,7 +11,7 @@ public interface ProductService {
     List<Product> getNonExpiredProducts();
     List<Product> getExpiredProducts();
     Product getProductById(Integer id);
+    List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice);
     Product updateProduct(Integer id, Product product);
     void deleteProduct(Integer id);
-    List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice);
 }

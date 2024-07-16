@@ -42,6 +42,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice) {
+        return productRepository.findProductsByPriceRange(minPrice, maxPrice);
+    }
+
+    @Override
     public Product updateProduct(Integer id, Product product) {
         if (!productRepository.existsById(id)) {
             throw new RuntimeException("Product not found");
@@ -53,10 +58,5 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteProduct(Integer id) {
         productRepository.deleteById(id);
-    }
-
-    @Override
-    public List<Product> getProductsByPriceRange(Integer minPrice, Integer maxPrice) {
-        return productRepository.findProductsByPriceRange(minPrice, maxPrice);
     }
 }
