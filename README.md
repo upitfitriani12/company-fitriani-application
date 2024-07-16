@@ -5,7 +5,7 @@ Aplikasi Pengecekan Produk ini dibuat untuk membantu pengecekan produk kadaluwar
 pada perusahaan Fitriani. perusahaan Fitriani merupakan perusahaan makanan instan dengan berbagai pilihan produk. 
 Dengan aplikasi ini, karyawan dapat dengan mudah menemukan produk yang sudah kadaluwarsa maupun yang belum.
 Fitur-fitur yang tersedia pada Product dalam aplikasi ini meliputi Create produk, 
-Get nonExpired untuk pengecekan produk kadaluwarsa, sedangkan untuk Get expired untuk 
+Get nonExpired untuk pengecekan produk yang belum kadaluwarsa, sedangkan untuk Get expired untuk 
 pengecekan daftar produk yang sudah kadaluwarsa, lalu terdapat Update produk, GetAll Products, 
 Get Product By ID dan Delete untuk Menghapus produk.
 Aplikasi ini dirancang untuk meningkatkan efisiensi dan kualitas manajemen produk di perusahaan Fitriani 
