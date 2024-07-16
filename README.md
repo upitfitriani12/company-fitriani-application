@@ -51,7 +51,7 @@ Response :
 }
 ```
 
-#### Get Employee
+#### Get Product
 
 Request :
 
